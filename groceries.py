@@ -25,13 +25,13 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
-print("------------")
+print("------------------------")
 print("THERE ARE "+str(products.__len__())+" PRODUCTS:")
-print("------------")
+print("------------------------")
 
 for x in products:
-    print("+ "+x['name']+" ($"+str(x['price'])+")")
-
+    price_usd = "${0:.2f}".format(x['price'])
+    print("+ "+x['name']+" ("+price_usd+")")
 # pprint(products)
 
 # TODO: write some Python code here to produce the desired output
